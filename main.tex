@@ -1,7 +1,15 @@
-% \iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -17,9 +25,9 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
 \usepackage{listings}
-\usepackage{gvv}
-%\def\inputGnumericTable{} 
-\usepackage[latin1]{inputenc}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
 \usepackage{array}                                            
 \usepackage{longtable}                                       
@@ -27,118 +35,67 @@
 \usepackage{multirow}                                         
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
-\usepackage{multicol}
-
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{problem}{Problem}
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{example}{Example}[section]
-\newtheorem{definition}[problem]{Definition}
-\newcommand{\BEQA}{\begin{eqnarray}}
-\newcommand{\EEQA}{\end{eqnarray}}
-\newcommand{\define}{\stackrel{\triangle}{=}}
-\theoremstyle{remark}
-\newtheorem{rem}{Remark}
+\usepackage{lscape}
 \begin{document}
 
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
+\title{10.5.3.9}
+\author{EE23BTECH11063 - Vemula Siddhartha
+}
+
+
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
 \title{Chapter-2 Complex Number}
 \author{AI24BTECH11032 Shreyansh Sonkar
 }
 \maketitle
-\newpage
-\bigskip
-
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \begin{enumerate}[start=7] % This line has been modified to start from number 7\\
-\item If $1$,$a_1$,$a_2$,$a_3$....$a_{n-1}$
- are the $n$  roots of unity, then show that $\brak{1-a_1}\brak{1-a_2}\brak{1-a_3}....\brak{1-a_{n-1}}$ = $n$ 
- 
-\hfill (1984- 2 Marks).\\
-\item Show that the area of the triangle on the Argand\\ 
-diagram formed by the complex  numbers\\
-$z,  iz \And z+  iz$ is $\frac{1}{2}\abs{z}^2$.
+\item If $1$,$a_1$,$a_2$,$a_3$....$a_{n-1}$ are the $n$  roots of unity, then show that $\brak{1-a_1}\brak{1-a_2}\brak{1-a_3}....\brak{1-a_{n-1}}$ = $n$ \hfill (1984- 2 Marks).\\
+\item Show that the area of the triangle on the Argand diagram formed by the complex  numbers\\
+$z,  iz \And z+  iz$ is $\frac{1}{2}\abs{z}^2$.\hfill (1986-2 Marks).\\
+\item Let $Z_1$=$10+6i$ and $Z_2$=$4+6i$. if $Z$ is any complex number such that the argument of ${\frac{\brak{Z-Z_1}}{\brak{Z-Z_2
+}}}$ is  ${\frac{\pi}{4}}$ then prove that $Z-7-9i$ =$3\sqrt{2}$.\hfill(1990-4 Marks).\\
+\item if {$iz^{3}$ -$z^2$-$z$+$\iota=0$} then show that $\abs{z}$ =$1$.\hfill(1995-5 Marks).\\
+\item If $\abs{Z}\le1$,$\abs{W}\le1$,show that $\brak{Z-W}^2\le\brak{\abs{Z}-\abs{W}}^2+\brak{\arg Z-\arg W}^2$ .\hfill(1995-5 Marks). \\
+\item Find all non-zero complex numbers $Z$ satisfying $\bar Z$=$ iZ^2 $ .\hfill(1996-2 Marks).\\
+\item Let $z_1$  and $z_2$ be roots of the equation $z^2$+$pz$+$q$=$0$, where the coefficients $p$ and $q$ may be complex numbers. Let $\Vec{A}$ and $\Vec{B}$ represent $z_1$ and $z_2$ in the complex plane . if$\angle ABC$ = $\alpha \not=0$ and $OA$=$OB$,where$O$ is the origin,prove that $p^2$=$4q\cos^2\brak{\frac{\alpha}{2}}$. \hfill(1997-5 Marks)\\
+\item For complex number $z$ and $w$,prove that $\abs{z}^2w$-$\abs{w}^2z$=$z$- $w$  if and only if $z$ =$w$ or $\bar{we} $ = $1$.\hfill(1999-10 Marks).\\
+\item Let a complex number $\alpha$ ,$\alpha \not=1$, be a root of the equation $z^{p+q}$-$z^p$-$z^q$+$1$=$0$, where $\Vec{p}$,$\Vec{q}$ are the distinct primes. Show that either $1+\alpha+\alpha^2+...+\alpha^{p-1}=0$ or $1+\alpha+\alpha^2+...+\alpha^{q- 1}=0$,but not both together. \hfill(2002-5 Marks)\\
+\item If $z_1$ and $z_2$ are two  complex number such that $\abs{z_1<1<}\abs{z_2}$ then prove that $\abs{\frac{1-z_1 \bar z_2}{z_1-z_2}}<1.$.\hfill(2003-2 Marks)\\
+\item Prove that there exists no  complex number $z$ such that $\abs{z}<\frac{1}{3}$ and  $\sum_{r=1}^{n}$ $a_r$ $z^r$ =$1$ where $\abs{a_r}$<$2$.\hfill (2003-2 Marks)\\
+\item Find the centre and radius  of circle given by
+$\abs{\frac{z-\alpha} \beta}$=$k$,$k\not=1$ 
+where,$z=x+i$,$\alpha$=$\alpha_1$+$i\alpha_2$,
+$\beta$=$\beta_1$+$i\beta_2$.\hfill(2004-2 Marks) \\  \item If one the vertices of the square \\
+circumscribing the circle $\abs{z-1} = \sqrt{2}$ is $2 +\sqrt{3} i $  find the other vertices of the square .\hfill (2005-4 Marks) \\
 
-\hfill (1986-2 Marks).\\
-\item Let $Z_1$=$10+6i$ and $Z_2$=$4+6i$. if $\vec{Z}$ is any \\
-complex number such that the argument of ${\frac{\brak{Z-Z_1}}{\brak{Z-Z_2
-}}}$\\
-is  ${\frac{\pi}{4}}$ then prove that $Z-7-9i$ =$3\sqrt{2}$\\
-
-\hfill(1990-4 Marks).\\
-\item if {$iz^{3}$ -$z^2$-$z$+$\iota=0$} then show that $\abs{z}$ =$1$
-
-\hfill(1995-5 Marks).\\
-\item If $\abs{Z}\le1$,$\abs{W}\le1$,show that\\
-$\brak{Z-W}^2\le\brak{\abs{Z}-\abs{W}}^2+\brak{\arg Z-\arg W}^2$ 
-
-\hfill(1995-5 Marks). \\
-\item Find all non-zero complex numbers $\vec{Z}$ \\
-satisfying $\bar Z$=$ iZ^2 $ 
-
-\hfill(1996-2 Marks).\\
-\item Let $\vec{z_1}$  and $\vec{z_2}$ be roots of the equation \\
-$z^2$+$pz$+$q$=$0$, where the coefficients $p$ and $q$\\
-may be complex numbers. Let $\Vec{A}$ and $\Vec{B}$ represent \\
-$z_1$ and $z_2$ in the complex plane . if$\angle\Vec{A}\Vec{B}\Vec{C}$ = $\alpha \not=0$\\ 
-and $\Vec{OA}$=$\Vec{OB}$,where $\vec{O}$ is the origin,prove that \\
-$p^2$=$4q\cos^2\brak{\frac{\alpha}{2}}$. 
-
-\hfill(1997-5 Marks)\\
-\item For complex number $z$ and $w$,prove \\
-that $\abs{z}^2w$-$\abs{w}^2z$=$z$- $w$  if and only \\
-if $z$ =$w$ or $\bar{we} $ = $1$.
-   
-\hfill(1999-10 Marks).\\
-\item Let a complex number $\alpha$ ,$\alpha \not=1$, be a root of \\
-the equation $z^{p+q}$-$z^p$-$z^q$+$1$=$0$, where $\Vec{p}$,$\Vec{q}$ are \\
-the distinct primes. Show that either \\
-$1+\alpha+\alpha^2+...+\alpha^{p-1}=0$ or $1+\alpha+\alpha^2+...+\alpha^{q- 1}=0$,\\
-but not both together. \\
-
-\hfill(2002-5 Marks)\\
-\item If $\vec{z_1}$ and $\vec{z_2}$ are two  complex number such that\\$\abs{z_1<1<}\abs{z_2}$ then prove that $\abs{\frac{1-z_1 \bar z_2}{z_1-z_2}}<1.$\\ 
-    
-    \hfill(2003-2 Marks)\\
-\item Prove that there exists no  complex number $\vec{z}$ \\such that $\abs{z}$<$\frac{1}{3}$ and  $\sum_{r=1}^{n}$ $a_r$ $z^r$ =$1$ where $\abs{a_r}$<$2$.\\
-      
- \hfill (2003-2 Marks)\\
-\item Find the centre and radius  of circle given by\\
-    $\abs{\frac{z-\alpha} \beta}$=$k$,$k\not=1$ 
-where,$z$=$x$+i,$\alpha$=$\alpha_1$+$i\alpha_2$, \\
-$\beta$=$\beta_1$+$i\beta_2$. \\
-    
-\hfill(2004-2 Marks) \\     
-\item If one the vertices of the square \\
-circumscribing the circle $\abs{z-1} = \sqrt{2}$ is $2 +\sqrt{3} i $ \\      
-find the other vertices of the square .\\
-
-\hfill (2005-4 Marks) \\
-\newpage
 $$PASSAGE-1$$
 Let $\vec{A}$,$\vec{B}$,$\vec{C}$ be three sets of complex number as\\ 
-defined below\\\\
-$\vec{A} = \{ $z$ :\mid \operatorname{Im} z \geq 1 \}$\\\\
-$\vec{B}$=$\{$z$:|z-2-i|=3\}$\\\\
+defined below\\
+$\vec{A} = \{ $z$ :\mid \operatorname{Im} z \geq 1 \}$\\
+$\vec{B}$=$\{$z$:|z-2-i|=3\}$\\
 $\vec{C} = \{$z$ : \operatorname{Re} \left((1-i)z\right) = \sqrt{2} \}$\\
 \begin{enumerate}     
 \item The number of element in the set$\vec{A} \cap\vec{B} \cap\vec{C} $
-is\\ 
-
-\hfill (2008)\\
+is. \hfill (2008)
    (a) 0 \hfill
    (b) 1 \hfill
    (c) 2 \hfill
    (d) $\infty$\\
-\item Let $\vec{z}$ be any point in$ \vec{A}\cap\vec{B}\cap\vec{C} $\\
- Then,$|z+1-i|^2+|z-5-i|^2$ lies between\\
- 
- \hfill  (2008) \\
+\item Let $\vec{z}$ be any point in$ \vec{A}\cap\vec{B}\cap\vec{C} $ Then,$|z+1-i|^2+|z-5-i|^2$ lies between. \hfill  (2008) 
 \begin{multicols}{2}
     \begin{enumerate}
         \item 25 and 29
@@ -147,10 +104,8 @@ is\\
         \item 40 and 44
     \end{enumerate}
 \end{multicols}
-\item  Let $\vec{z}$ be any point $\vec{A}$ $\vec{B}$ $\vec{C}$ and let $\vec{w}$ be any\\
-point satisfying $|w-2-i|<3$.Then, $|z|-|w|+3$ lies between\\
-   
-\hfill (2008) \\
+\item  Let $z$ be any point $\vec{A}$ $\vec{B}$ $\vec{C}$ and let $\vec{w}$ be any\\
+point satisfying $|w-2-i|<3$.Then, $|z|-|w|+3$ lies between.\hfill (2008) 
  \begin{multicols}{2}
   \begin{enumerate}
     \item -6 and 3
