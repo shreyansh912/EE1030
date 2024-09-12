@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.8.5)  10 SEP 2024 15:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.8.5)  12 SEP 2024 18:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1906,7 +1906,7 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 File: ts1txr.fd 2000/12/15 v3.1
 )
 Underfull \hbox (badness 10000) in paragraph at lines 66--67
-[]\OT1/txr/m/n/10 If $1\OML/txmi/m/it/10 ; a[]; a[]; a[]::::a[]$ \OT1/txr/m/n/1
+[]\OT1/txr/m/n/10 If $1\OML/txmi/m/it/10 ; a[]; a[]; a[] [] a[]$ \OT1/txr/m/n/1
 0 are the $\OML/txmi/m/it/10 n$ \OT1/txr/m/n/10 roots of unity,then show that
  []
 
@@ -1950,6 +1950,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
+! Undefined control sequence.
+l.75 ...ha^{p-1}=0$ or $1+\alpha+\alpha^{2}+\cdpts
+                                                  +\alpha^{q- 1}=0$,but not ...
+
+? ranger
+OK, entering \nonstopmode...
 
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
@@ -2030,7 +2036,7 @@ nts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 65927 bytes).
+Output written on main.pdf (2 pages, 65928 bytes).
 PDF statistics:
  119 PDF objects out of 1000 (max. 8388607)
  80 compressed objects within 1 object stream
