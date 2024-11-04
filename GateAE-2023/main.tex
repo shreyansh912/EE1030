@@ -1,0 +1,251 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{bookmark}
+\usepackage{lscape}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Gate AE-2023}
+\author{AI24BTECH11032 Shreyansh Sonkar}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate} [start=27]
+\item Which of the following statement $\brak{\text{ s }}$ is/are true about the ribs of an airplane wing with semi-monocoque construction?
+\begin{enumerate}
+    \item For a rectangular planform wing, the dimensions of the ribs DO NOT depend on their spanwise position in the wing.
+    \item Ribs increase the column buckling stress of longitudinal stiffeners connected to them.
+    \item Ribs increase plate buckling stress of the skin panels.
+    \item Ribs help in maintaining aerodynamic shape of the wing.
+\end{enumerate}
+\bigskip
+\item From the options given, select all that are true for turbofan engines with
+afterburners. 
+\begin{enumerate}
+    \item Turning afterburner ON increases specific fuel consumption.
+    \item Turbofan engines with afterburners have variable area nozzles.
+    \item Turning afterburner ON decreases specific fuel consumption.
+    \item Turning afterburner ON increases stagnation pressure across the engine.
+\end{enumerate}
+\bigskip
+\item Which of the following statement $\brak{\text{ s }}$ is/are true with respect to eigenvalues and eigenvectors of a matrix?
+\begin{enumerate}
+    \item The sum of the eigenvalues of a matrix equals the sum of the elements of the principal diagonal.
+    \item If $\lambda$ is an eigenvalue of a matrix A $\frac{1}{\lambda}$ is always an eigenvalue of its transpose $\brak{A^{T}}.$
+    \item If $\lambda$ is an eigenvalue of an orthogonal matrix A $\frac{1}{\lambda}$ is always an eigenvalue of  A.
+    \item If a matrix has n distinct eigenvalues, it also has n independent eigenvectors. 
+\end{enumerate}
+\bigskip
+\item For studying wing vibrations, a wing of mass M and finite dimensions has been
+idealized by assuming it to be supported using a linear spring of equivalent
+stiffness k and a torsional spring of equivalent stiffness $k_{\theta}$ as shown in the figure. The centre of gravity$\brak{\text{ CG }}$ of the wing idealized as an airfoil is marked in the figure. The number of degree $\brak{\text{ s }}$ of freedom for this idealized wing vibration model is $\underline{\hspace{2cm}}.\brak{\text{ Answer in integer }}$
+\begin{figure}[H]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw [short] (2.25,10.25) -- (2,10);
+\draw [short] (2.5,10.25) -- (2.25,10);
+\draw [short] (2.75,10.25) -- (2.5,10);
+\draw [short] (3,10.25) -- (2.75,10);
+\draw [short] (3.25,10.25) -- (3,10);
+\draw [short] (3.5,10.25) -- (3.25,10);
+\draw [short] (3.75,10.25) -- (3.5,10);
+\draw [short] (4,10.25) -- (3.75,10);
+\draw [short] (4,10) -- (4.25,10.25);
+\draw [short] (4,9.75) -- (4.5,10);
+\draw [short] (4,9.5) -- (4.5,9.75);
+\draw [short] (4,9.25) -- (4.5,9.5);
+\draw [short] (4,9) -- (4.5,9.25);
+\draw [short] (4,8.75) -- (4.5,9);
+\draw [short] (4,8.5) -- (4.5,8.75);
+\draw [short] (4,8.25) -- (4.5,8.5);
+\draw [short] (4,8) -- (4.5,8.25);
+\draw [short] (4,7.75) -- (4.5,8);
+\draw [short] (4,7.5) -- (4.5,7.75);
+\draw [short] (4,7.25) -- (4.5,7.5);
+\draw [short] (4,7) -- (4.5,7.25);
+\draw [short] (4,6.75) -- (4.5,7);
+\draw [short] (4,6.5) -- (4.5,6.75);
+\draw (3,10) to[R] (3,6.5);
+\draw [short] (1.5,7) .. controls (3.25,7) and (4.25,6.25) .. (5.25,6);
+\draw [short] (1.5,7) .. controls (1.75,6.25) and (4.25,5.5) .. (5.25,6);
+\draw [short] (4,6.75) -- (3,6.75);
+\draw  (3,6.25) circle (0.5cm);
+\draw  (3,6.25) circle (0.25cm);
+\node at (3,6.5) [circ] {};
+\node [font=\small] at (2.5,8.25) {K};
+\node [font=\small] at (2.25,5.75) {k${_\theta}$};
+\node [font=\large] at (4.25,6) {CG};
+\end{circuitikz}
+}%
+
+\end{figure}
+\bigskip
+\item The system of equations\\
+$x-2y+\alpha z=0\\2x+y-4z=0\\x-y+z=0$\\
+has a non-trivial solution for $\alpha=\underline{\hspace{2cm}}.\brak{\text{ Answer in integer }}$
+\bigskip
+\item An airplane weighing $40 kN$ is landing on a horizontal runway during which it is retarded by an arresting cable mechanism. The tension in the arresting cable at a given instant, as shown in the figure, is $100 kN.$ Assuming that the thrust from the engine continues to balance airplane drag, the magnitude of horizontal load factor is $\underline{\hspace{2cm}}.\brak{\text{ round off to one decimal place }}$
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw [short] (0,5.25) -- (10.5,5.25);
+\draw [short] (1.75,6.5) -- (1.5,5.75);
+\draw [short] (6,6.5) -- (6,6);
+\draw [short] (1.5,6.5) .. controls (4.5,6.25) and (4.5,6.25) .. (7.5,6.5);
+\draw [short] (2.25,7.5) .. controls (4,8) and (5,8.25) .. (7.5,6.75);
+\draw [short] (1.5,6.5) .. controls (0.5,6.75) and (0.25,8.25) .. (2.25,7.5);
+\draw [short] (7.5,6.75) .. controls (7.5,7) and (8.5,6.5) .. (7.5,6.5);
+\draw [short] (6.5,7.25) -- (6.75,8);
+\draw [short] (6.75,8) -- (7.25,8);
+\draw [short] (7.25,8) -- (7.5,6.75);
+\draw  (1.5,5.75) circle (0.5cm);
+\draw  (6,5.75) circle (0.5cm);
+\draw [short] (7.25,6.5) -- (10.25,5.25);
+\draw [short] (9.25,5.25) .. controls (8.75,5.75) and (8.75,6) .. (9,5.75);
+\draw [short] (9,5.75) -- (9,5.5);
+\draw [short] (9,5.75) -- (8.75,5.75);
+\draw [short] (2,7) .. controls (3,7.25) and (3.5,7.5) .. (4.25,7.5);
+\draw [short] (2,7) .. controls (3.25,7) and (3.5,7) .. (4.25,7.5);
+\node [font=\large] at (8.5,5.5) {10$\circ$};
+\node [font=\small] at (9.5,6.25) {Arresting Cable};
+\node at (7.25,6.5) [circ] {};
+\node at (10.25,5.25) [circ] {};
+\end{circuitikz}
+}%
+
+\end{figure}
+\bigskip
+\item The ratio of the speed of sound in H$_{2}\brak{\text{ molecular weight }2\frac{kg}{kmol}}$ to that in N$_{2\brak{\text{ molecular weight }28\frac{kg}{kmol}}}$ at temperature $300\text{ K }$ and pressure $2\text{ bar }$ is $\underline{\hspace{2cm}}.\brak{\text{ round off to two decimal place }}$
+\bigskip
+\item Airplane A and Airplane B are cruising at altitudes of $2 km \text{ and } 4 km$,respectively. The free stream density and static pressure at altitude $2 km\text{ are } 1.01\frac{kg}{m^{3}}\text{ and } 79.50 kPa$ respectively, and at altitude $4 km \text{ they are }0.82\frac{kg}{m^{3}}\text{ and }61.70kPa,$ respectively. The differential pressure reading from the pitot-static tubes is
+$3kpa$ a for both the airplanes. Assuming incompressible flow, the ratio of
+cruise speeds of Airplane A to Airplane B is $\underline{\hspace{2cm}}.\brak{\text{ round off to two decimal place }}$
+\bigskip
+\item A supersonic vehicle powered by a ramjet engine is cruising at a speed of $1000\frac{m}{s}$ The ramjet engine burns hydrogen in a subsonic combustor to produce thrust. The heat of combustion for hydrogen is $120\frac{MJ}{kg}.$ The overall efficiency of the engine $\eta_0,$ defined as the ratio of propulsive power to the total heat release in the combustor, is $40\%$ Taking acceleration due to gravity $g_{0}=10\frac{m}{s^{2}},$ the specific impulse of the engine is
+$\underline{\hspace{2cm}}.\text{ seconds }\brak{\text{ round off to two decimal place }}$
+\bigskip
+\item Given the function $y\brak{x}=\brak{x+3}\brak{x-2},$ for $-4<x<4.$ What is the value of x at which the function has a minimum?
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\frac{-3}{2}$
+    \item $\frac{-1}{2}$
+    \item $\frac{1}{2}$
+    \item $\frac{3}{2}$
+\end{enumerate}
+\end{multicols}
+\bigskip
+\item A supersonic aircraft has an air intake ramp that can be rotated about the leading edge O such that the shock from the leading edge meets the cowl lip as shown in the figure. Select all the correct statement$\brak{\text{ s }}$ as per oblique shock theory when the flight Mach number M is increased.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (0.75,10.75) to[short] (8.5,10.75);
+\draw (0.75,10.75) to[short] (4.25,10.75);
+\draw [short] (0.75,10.75) -- (4.25,9.75);
+\draw [short] (4.25,9.75) -- (4.25,8.5);
+\draw [short] (4.25,8.5) -- (8.75,8.5);
+\draw [short] (0.75,10.75) -- (4.25,8.5);
+\draw [short] (1.75,10.75) .. controls (2.25,11) and (3.25,10.75) .. (2.25,9.75);
+\draw [short] (2,10) -- (2.25,9.75);
+\draw [short] (2.25,9.75) -- (2.75,9.75);
+\draw [short] (3,10.75) .. controls (4,10.75) and (4,10.75) .. (3.5,10);
+\draw [short] (3.25,10.25) -- (3.5,10);
+\draw [short] (3.5,10) -- (3.75,10);
+\draw [->, >=Stealth] (-0.25,9) -- (2.25,9);
+\node [font=\large] at (0.5,10.75) {O};
+\node [font=\large] at (0.75,9.5) {M>1};
+\node [font=\small] at (3,9.75) {$\beta_{SHOCK}$};
+\node [font=\small] at (4.25,10.25) {$\theta_{RAMP}$};
+\node [font=\small] at (4.75,8.25) {$COWL LIP$};
+\node [font=\small] at (5,9.25) {$INTAKE$};
+\end{circuitikz}
+}%
+
+\end{figure}
+\begin{enumerate}
+    \item It is always possible to find a ramp setting $\theta_{RAMP}$ such that the shock still meets the cowl lip $\brak{\beta_{SHOCK}\text{ remains the same }}.$
+    \item if $\theta_{RAMP}$ is held fixed, the shock angle $\beta_{SHOCK}$ will increase
+    \item If M exceeds a critical value, it would NOT be possible to find a ramp setting $\theta_{RAMP}$ such that the shock still meets the cowl lip $\brak{\beta_{SHOCK}\text{ remains the same }}.$
+    \item Shock angle $\beta_{SHOCK}<\sin^{-1}\brak{\frac{1}{M}}$
+\end{enumerate}
+\bigskip
+\item Two missiles A and B powered by solid rocket motors have identical specific
+impulse, liftoff mass of $5600$kg each, and burn durations of $t_{A}=30s\text{ and } t_{B}=70s.$ The propellant mass flow rates $\Dot{m}_{A}\text{ and }\Dot{m}_{B},$ for missiles A and B, respectively, are given by\\
+$\Dot{m}_{A}=120\frac{kg}{s},0\leq t\leq30$\\
+$\Dot{m}_{B}=70\frac{kg}{s},0\leq t\leq70$\\
+Neglecting gravity and aerodynamic forces, the relationship between the final
+velocities $V_{A}\text{ and }V_{B}$ of missiles A and B, respectively, is given by
+\begin{enumerate}
+    \item $V_{A}=4.1V_{B}$
+    \item $V_{A}=V_{B}$
+    \item $V_{A}=0.5V_{B}$
+    \item $V_{A}=0.7V_{B}$
+\end{enumerate}
+\bigskip
+\item A perfect gas stored in a large reservoir exhausts into the atmosphere through a convergent duct. The reservoir pressure is $P_{0}$ and temperature is $T_{0}.$  The jet emerges from the nozzle at choked conditions with average velocity u, Mach number M, pressure p, temperature T, and density $\rho.$ If the reservoir pressure is increased, then
+\begin{enumerate}
+    \item u, M, p, T, and $\rho$ increase
+    \item u,  p, T, and $\rho$ increase, but M remains the same 
+    \item u, M, and T remain the same, but p and $\rho$ increase
+    \item u, M,  T, and $\rho$ remain the same, but p increase
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+\end{document}
